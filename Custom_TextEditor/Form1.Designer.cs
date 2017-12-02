@@ -1,5 +1,5 @@
 ﻿namespace Custom_TextEditor {
-    partial class Form1 {
+    partial class MainForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,110 +23,133 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.menuStrip1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.notepadMenu = new System.Windows.Forms.MenuStrip();
+            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.newFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabController = new System.Windows.Forms.TabControl();
+            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.notepadMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // notepadMenu
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1276, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.notepadMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileMenu,
+            this.editMenu});
+            this.notepadMenu.Location = new System.Drawing.Point(0, 0);
+            this.notepadMenu.Name = "notepadMenu";
+            this.notepadMenu.Size = new System.Drawing.Size(1276, 24);
+            this.notepadMenu.TabIndex = 0;
+            this.notepadMenu.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // fileMenu
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveToolStripMenuItem,
-            this.loadToolStripMenuItem,
-            this.saveToolStripMenuItem1,
-            this.saveAsToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newFile,
+            this.openFile,
+            this.saveFile,
+            this.saveAsFile});
+            this.fileMenu.Name = "fileMenu";
+            this.fileMenu.Size = new System.Drawing.Size(37, 20);
+            this.fileMenu.Text = "File";
             // 
-            // saveToolStripMenuItem
+            // newFile
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem.Text = "New";
+            this.newFile.Name = "newFile";
+            this.newFile.Size = new System.Drawing.Size(152, 22);
+            this.newFile.Text = "New";
+            this.newFile.Click += new System.EventHandler(this.newFile_Click);
             // 
-            // editToolStripMenuItem
+            // openFile
             // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.openFile.Name = "openFile";
+            this.openFile.Size = new System.Drawing.Size(152, 22);
+            this.openFile.Text = "Open";
+            this.openFile.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
-            // copyToolStripMenuItem
+            // saveFile
             // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
+            this.saveFile.Name = "saveFile";
+            this.saveFile.Size = new System.Drawing.Size(152, 22);
+            this.saveFile.Text = "Save";
+            this.saveFile.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
             // 
-            // pasteToolStripMenuItem
+            // saveAsFile
             // 
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
+            this.saveAsFile.Name = "saveAsFile";
+            this.saveAsFile.Size = new System.Drawing.Size(152, 22);
+            this.saveAsFile.Text = "Save as";
+            this.saveAsFile.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
-            // loadToolStripMenuItem
+            // editMenu
             // 
-            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.loadToolStripMenuItem.Text = "Load";
-            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
+            this.editMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyEdit,
+            this.pasteEdit,
+            this.cutToolStripMenuItem});
+            this.editMenu.Name = "editMenu";
+            this.editMenu.Size = new System.Drawing.Size(39, 20);
+            this.editMenu.Text = "Edit";
             // 
-            // saveToolStripMenuItem1
+            // copyEdit
             // 
-            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.saveToolStripMenuItem1.Text = "Save";
-            this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
+            this.copyEdit.Name = "copyEdit";
+            this.copyEdit.Size = new System.Drawing.Size(152, 22);
+            this.copyEdit.Text = "Copy";
+            this.copyEdit.Click += new System.EventHandler(this.copyEdit_Click);
             // 
-            // saveAsToolStripMenuItem
+            // pasteEdit
             // 
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saveAsToolStripMenuItem.Text = "Save as";
-            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            this.pasteEdit.Name = "pasteEdit";
+            this.pasteEdit.Size = new System.Drawing.Size(152, 22);
+            this.pasteEdit.Text = "Paste";
+            this.pasteEdit.Click += new System.EventHandler(this.pasteEdit_Click);
             // 
-            // richTextBox1
+            // tabController
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 24);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1276, 596);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.tabController.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabController.ImageList = this.imageList;
+            this.tabController.ItemSize = new System.Drawing.Size(0, 24);
+            this.tabController.Location = new System.Drawing.Point(0, 24);
+            this.tabController.Name = "tabController";
+            this.tabController.SelectedIndex = 0;
+            this.tabController.Size = new System.Drawing.Size(1276, 596);
+            this.tabController.TabIndex = 1;
             // 
-            // Form1
+            // cutToolStripMenuItem
+            // 
+            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cutToolStripMenuItem.Text = "Cut";
+            this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "cancel.png");
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1276, 620);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Controls.Add(this.tabController);
+            this.Controls.Add(this.notepadMenu);
+            this.MainMenuStrip = this.notepadMenu;
+            this.Name = "MainForm";
             this.Text = "Custom Text Editor";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.notepadMenu.ResumeLayout(false);
+            this.notepadMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,16 +157,18 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.MenuStrip notepadMenu;
+        private System.Windows.Forms.ToolStripMenuItem fileMenu;
+        private System.Windows.Forms.ToolStripMenuItem openFile;
+        private System.Windows.Forms.ToolStripMenuItem saveFile;
+        private System.Windows.Forms.ToolStripMenuItem saveAsFile;
+        private System.Windows.Forms.ToolStripMenuItem editMenu;
+        private System.Windows.Forms.ToolStripMenuItem copyEdit;
+        private System.Windows.Forms.ToolStripMenuItem pasteEdit;
+        private System.Windows.Forms.ToolStripMenuItem newFile;
+        private System.Windows.Forms.TabControl tabController;
+        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
+        private System.Windows.Forms.ImageList imageList;
     }
 }
 

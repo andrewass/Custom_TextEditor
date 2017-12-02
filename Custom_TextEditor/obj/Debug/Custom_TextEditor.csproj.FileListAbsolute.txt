@@ -13,9 +13,9 @@ C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEd
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\bin\Debug\Custom_TextEditor.exe
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\bin\Debug\Custom_TextEditor.pdb
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.csprojResolveAssemblyReference.cache
-C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.Form1.resources
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.Properties.Resources.resources
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.csproj.GenerateResource.Cache
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.csproj.CoreCompileInputs.cache
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.exe
 C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.pdb
+C:\Users\andreas\Documents\VisualStudio_Projects\Custom_TextEditor\Custom_TextEditor\obj\Debug\Custom_TextEditor.MainForm.resources
