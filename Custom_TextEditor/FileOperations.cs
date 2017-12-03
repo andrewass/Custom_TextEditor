@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Custom_TextEditor {
@@ -9,7 +10,7 @@ namespace Custom_TextEditor {
        
         /* Create a new tab on the form, providing a new rich text box
          * filling the form */
-        public void CreateNewTab(TabControl tabCtrl) {
+        internal void CreateNewTab(TabControl tabCtrl) {
             TabPage tabPage = new TabPage("New Document");
             RichTextBox textBox = new RichTextBox();
             textBox.Dock = DockStyle.Fill;
@@ -20,7 +21,7 @@ namespace Custom_TextEditor {
 
 
         /* Load the content from a file to the text box */
-        public void Load(RichTextBox textBox, TabControl tabCtrl) {
+        internal void Load(RichTextBox textBox, TabControl tabCtrl) {
             OpenFileDialog ofd = new OpenFileDialog();
             if(ofd.ShowDialog() == DialogResult.OK) {
                 string filePath = Path.GetFullPath(ofd.FileName);
@@ -33,13 +34,17 @@ namespace Custom_TextEditor {
 
 
         /* Store the content of the text box to a not-yet defined file*/
-        public void SaveAs(RichTextBox textBox, TabControl tabCtrl) {
+        internal void SaveAs(RichTextBox textBox, TabControl tabCtrl) {
             SaveFileDialog sfd = new SaveFileDialog();
             //If user clicks OK in the dialog window
             if(sfd.ShowDialog() == DialogResult.OK) {
                 string filePath = Path.GetFullPath(sfd.FileName);
                 WriteToFile(textBox, filePath);
             }
+        }
+
+        internal void CloseFile(RichTextBox richTextBox, TabControl tabController) {
+            
         }
 
 

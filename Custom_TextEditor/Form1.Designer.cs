@@ -34,9 +34,10 @@
             this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.copyEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabController = new System.Windows.Forms.TabControl();
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabController = new System.Windows.Forms.TabControl();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.closeFile = new System.Windows.Forms.ToolStripMenuItem();
             this.notepadMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.newFile,
             this.openFile,
             this.saveFile,
-            this.saveAsFile});
+            this.saveAsFile,
+            this.closeFile});
             this.fileMenu.Name = "fileMenu";
             this.fileMenu.Size = new System.Drawing.Size(37, 20);
             this.fileMenu.Text = "File";
@@ -103,16 +105,23 @@
             // copyEdit
             // 
             this.copyEdit.Name = "copyEdit";
-            this.copyEdit.Size = new System.Drawing.Size(152, 22);
+            this.copyEdit.Size = new System.Drawing.Size(102, 22);
             this.copyEdit.Text = "Copy";
             this.copyEdit.Click += new System.EventHandler(this.copyEdit_Click);
             // 
             // pasteEdit
             // 
             this.pasteEdit.Name = "pasteEdit";
-            this.pasteEdit.Size = new System.Drawing.Size(152, 22);
+            this.pasteEdit.Size = new System.Drawing.Size(102, 22);
             this.pasteEdit.Text = "Paste";
             this.pasteEdit.Click += new System.EventHandler(this.pasteEdit_Click);
+            // 
+            // cutToolStripMenuItem
+            // 
+            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.cutToolStripMenuItem.Text = "Cut";
+            this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // tabController
             // 
@@ -125,18 +134,18 @@
             this.tabController.Size = new System.Drawing.Size(1276, 596);
             this.tabController.TabIndex = 1;
             // 
-            // cutToolStripMenuItem
-            // 
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cutToolStripMenuItem.Text = "Cut";
-            this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
-            // 
             // imageList
             // 
             this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList.Images.SetKeyName(0, "cancel.png");
+            // 
+            // closeFile
+            // 
+            this.closeFile.Name = "closeFile";
+            this.closeFile.Size = new System.Drawing.Size(152, 22);
+            this.closeFile.Text = "Close";
+            this.closeFile.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -169,6 +178,7 @@
         private System.Windows.Forms.TabControl tabController;
         private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.ToolStripMenuItem closeFile;
     }
 }
 

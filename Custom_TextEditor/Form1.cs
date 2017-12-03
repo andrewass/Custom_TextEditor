@@ -41,6 +41,14 @@ namespace Custom_TextEditor {
             fileOps.CreateNewTab(tabController);
         }
 
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
+            NewMethod();
+        }
+
+        private void NewMethod() {
+            fileOps.CloseFile(GetRichTextBox(), tabController);
+        }
+
         //=============== Edit operations ==========================
 
         /* Copy the selected part of a rich text box to the clipboard*/
@@ -58,5 +66,7 @@ namespace Custom_TextEditor {
         private void cutToolStripMenuItem_Click(object sender, EventArgs e) {
             GetRichTextBox().Cut();
         }
+
+        
     }
 }
